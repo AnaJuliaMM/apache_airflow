@@ -5,7 +5,7 @@ from datetime import datetime
 
 # DAG object
 with  DAG('trigger_rule_dag', 
-          description='This DAG handle with trigger rules',
+          description='This DAG handles trigger rules',
           schedule_interval=None,
           start_date=datetime(2024, 3, 12),
           catchup=False) as dag:
