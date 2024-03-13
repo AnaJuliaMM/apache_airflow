@@ -29,7 +29,7 @@ def print_variable(**context):
 
 
 
-task1 = python_task = PythonOperator(
+task1 =  PythonOperator(
     task_id="task_2",
     python_callable= print_variable,
     dag=dag)
