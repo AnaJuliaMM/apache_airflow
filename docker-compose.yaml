@@ -61,9 +61,19 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+
+    # New configs: process time control
     AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
     AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 5
     AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 20
+
+    # Email config
+    AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+    AIRFLOW__SMTP__SMTP_USER: mmartinsanajulia@gmail.com
+    AIRFLOW__SMTP__SMTP_PASSWORD: ujoovrjvqzyyharn
+    AIRFLOW__SMTP__SMTP_PORT: 587
+    AIRFLOW__SMTP__MAIL_FROM: Airflow
+
 
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
