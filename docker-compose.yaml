@@ -69,8 +69,8 @@ x-airflow-common:
 
     # Email config
     AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
-    AIRFLOW__SMTP__SMTP_USER: mmartinsanajulia@gmail.com
-    AIRFLOW__SMTP__SMTP_PASSWORD: ujoovrjvqzyyharn
+    AIRFLOW__SMTP__SMTP_USER: email
+    AIRFLOW__SMTP__SMTP_PASSWORD: password
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__MAIL_FROM: Airflow
 
