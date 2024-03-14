@@ -15,7 +15,7 @@ def print_rows(ti):
 
 
 # DAG object
-dag = DAG('postgres_dag', 
+dag = DAG('postgres_provider_dag', 
           description='DAG that interact with local postgres conteiner',
           schedule= None,
           start_date=datetime(2024, 3, 12),
