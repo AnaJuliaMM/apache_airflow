@@ -1,10 +1,9 @@
 from airflow.models import BaseOperator 
-from airflow.utils.decorators import apply_default
+from airflow.utils.decorators import apply_defaults
 import pandas as pd 
 
 class BigDataOperator(BaseOperator):
-    
-    @apply_default
+    @apply_defaults
     def __init__(self,  file_path, destination_path, separator=';', file_type='parquet', *args, **kwargs):
         super().__init__( *args, **kwargs)
         self.file_path = file_path
