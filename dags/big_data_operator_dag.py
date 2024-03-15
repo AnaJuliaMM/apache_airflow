@@ -14,7 +14,8 @@ dag = DAG('bigdata_operator_dag',
 big_data = BigDataOperator(
     task_id='big_data',
     file_path = '/opt/airflow/data/Churn.csv',
-    destination_path = '/opt/airflow/data/Churn.parquet',
+    file_type='json',
+    destination_path = '/opt/airflow/data/Churn.json',
     dag=dag
 )
 
